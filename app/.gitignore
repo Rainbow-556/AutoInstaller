@@ -1,1 +1,4 @@
+# final .gitignore file 2016.9.13
+
 /build
+*.iml
