@@ -14,7 +14,7 @@ import java.util.List;
 public class AutoInstallerService extends AccessibilityService{
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event){
-        JLog.e("---------------------------start----------------------------------");
+        JLog.d("---------------------------start----------------------------------");
         int eventType = event.getEventType();//事件类型
         JLog.e("packageName:" + event.getPackageName() + "");//响应事件的包名，也就是哪个应用才响应了这个事件
         JLog.e("source:" + event.getSource() + "");//事件源信息
@@ -55,7 +55,7 @@ public class AutoInstallerService extends AccessibilityService{
         for(CharSequence txt : event.getText()){
             JLog.e("text:" + txt);//输出当前事件包含的文本信息
         }
-        JLog.e("-----------------------------end--------------------------------");
+        JLog.d("-----------------------------end--------------------------------");
         try{
             findAndPerformActionButton("替换");
             findAndPerformActionButton("安装");
